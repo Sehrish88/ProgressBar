@@ -70,3 +70,7 @@
 
   }
 
+.circle.active {
+  border-color: #3498db;
+  
+}
