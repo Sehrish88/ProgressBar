@@ -1,6 +1,11 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rubik+Maps&display=swap');
 
+  :root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #090000;
+  }
+
   *{
     box-sizing: border-box;
   }
@@ -29,7 +34,7 @@
 
   .progress-container::before {
     content: '';
-    background-color: #e0e0e0;
+    background-color: rgba(244, 237, 240, 0.733);
     position: absolute;
     top: 50%;
     left: 0;
@@ -43,7 +48,7 @@
   }
   
   .progress {
-    background-color: #3498db;
+    background-color: var(--line-border-fill);
     position: absolute;
     top: 50%;
     left: 0;
@@ -58,19 +63,20 @@
 
   .circle {
     background-color: #fff;
-    color: #999;
+    color: #e062b4;
     border-radius: 50%;
     height: 30px;
     width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #0b0808;
+    border: 5px solid var(--line-border-empty);
     transition: .4s ease;
 
-  }
+  } 
 
 .circle.active {
-  border-color: #3498db;
+  border-color: var(--line-border-fill)
   
-}
+
+} 
