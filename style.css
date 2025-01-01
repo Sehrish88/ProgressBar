@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rubik+Maps&display=swap');
 
   :root {
-    --line-border-fill: #3498db;
+    --line-border-fill: #db34d0;
     --line-border-empty: #bbb2b2;
   }
 
@@ -34,7 +34,7 @@
 
   .progress-container::before {
     content: '';
-    background-color: rgba(244, 237, 240, 0.733);
+    background-color: rgba(210, 199, 204, 0.733);
     position: absolute;
     top: 50%;
     left: 0;
@@ -56,10 +56,9 @@
     height: 4px;
     width: 0%;
     z-index: -1;
-    transition: 0.4s ease;
+    transition: width 0.4s ease;
+}
 
-
-  }
 
   .circle {
     background-color: #fff;
@@ -72,6 +71,7 @@
     justify-content: center;
     border: 5px solid #e0e0e0;
     transition: .4s ease;
+    z-index:  /* Ensure circles are above the progress bar */
 
   } 
 

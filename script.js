@@ -32,6 +32,15 @@ function update() {
     }
   });
   const actives = document.querySelectorAll(".active");
-  progress.style.width =
-    ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
+  const progressWidth = ((actives.length - 1) / (circles.length - 1)) * 100;
+  progress.style.width = `calc(${progressWidth}% - ${15}px)`;
+
+  if (currentActive === 1) {
+    prev.disabled = true;
+  } else if (currentActive === circles.length) {
+    next.disabled = true;
+  } else {
+    prev.disabled = currentActive === 1;
+    next.disabled = currentActive === circles.length;
+  }
 }
